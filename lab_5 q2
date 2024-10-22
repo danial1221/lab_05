@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+namespace AirlineReservationSystem
+{
+public class Customer
+{
+public int CustomerId { get; set; }
+public string LastName { get; set; }
+public string FirstName { get; set; }
+public string Street { get; set; }
+public string City { get; set; }
+public string State { get; set; }
+public string ZipCode { get; set; }
+public string Phone { get; set; }
+public string Email { get; set; }
+public string Password { get; set; }
+// Constructor, Getters, Setters, other methods
+20	+
+}
+21	+
+22	+
+public class RetailCustomer : Customer
+23	+
+{
+24	+
+public string CreditCardType { get; set; }
+25	+
+public string CreditCardNo { get; set; }
+26	+
+27	+
+// Constructor, Getters, Setters, other methods
+28	+
+}
+29	+
+30	+
+public class CorporateCustomer : Customer
+31	+
+{
+32	+
+public string CompanyName { get; set; }
+33	+
+public int FrequentFlyerPts { get; set; }
+
+public string BillingAccountNo { get; set; }
+// Constructor, Getters, Setters, other methods
+}
+public class Reservation
+
+{
+public int ReservationNo { get; set; }
+public DateTime Date { get; set; }
+public Customer Customer { get; set; }
+
+// Constructor, Getters, Setters, other methods
+}
+public class Seat
+{
+public int RowNo { get; set; }
+public int SeatNo { get; set; }
+public decimal Price { get; set; }
+public string Status { get; set; }
+// Constructor, Getters, Setters, other methods
+}
+public class Flight
+{
+public int FlightId { get; set; }
+public DateTime Date { get; set; }
+public string Origin { get; set; }
+public string Destination { get; set; }
+public DateTime DepartureTime { get; set; }
+public DateTime ArrivalTime { get; set; }
+public int SeatingCapacity { get; set; }
+public List<Seat> Seats { get; set; } = new List<Seat>();
